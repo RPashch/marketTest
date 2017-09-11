@@ -6,11 +6,6 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-/**
- * Created on 25.05.2017
- *
- * @author Roman Hayda
- */
 public interface ProductDao extends JpaRepository<Product,Long> {
     @Override
     @Query("select p from Product p where p.id = ?1")

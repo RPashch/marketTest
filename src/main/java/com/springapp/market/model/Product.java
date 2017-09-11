@@ -2,13 +2,6 @@ package com.springapp.market.model;
 
 import javax.persistence.*;
 
-/**
- * Created on 22.05.2017
- *
- * Simple JavaBean object that represents products of {@link Company}.
- *
- * @author Roman Hayda
- */
 @Entity
 @Table(name = "products")
 public class Product {

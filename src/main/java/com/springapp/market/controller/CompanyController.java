@@ -14,13 +14,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 
-/**
- * Created on 25.05.2017
- *
- * Request mapping for {@link com.springapp.market.model.Company}.
- *
- * @author Roman Hayda
- */
 @Controller
 public class CompanyController {
     private CompanyService companyService;

@@ -5,11 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-/**
- * Created on 25.05.2017
- *
- * @author Roman Hayda
- */
 public interface CompanyDao extends JpaRepository<Company, Long> {
 
     @Override

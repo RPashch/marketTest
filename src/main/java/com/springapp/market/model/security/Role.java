@@ -3,13 +3,6 @@ package com.springapp.market.model.security;
 import javax.persistence.*;
 import java.util.Set;
 
-/**
- * Created on 22.05.2017
- *
- * Simple JavaBean object that represents role of {@link User}.
- *
- * @author Roman Hayda
- */
 @Entity
 @Table(name = "roles")
 public class Role {

@@ -14,13 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Created on 25.05.2017
- *
- * Implementation of {@link org.springframework.security.core.userdetails.UserDetailsService} interface.
- *
- * @author Roman Hayda
- */
+
 public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     private UserDao userDao;

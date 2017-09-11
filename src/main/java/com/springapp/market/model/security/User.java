@@ -3,13 +3,7 @@ package com.springapp.market.model.security;
 import javax.persistence.*;
 import java.util.Set;
 
-/**
- * Created on 22.05.2017
- *
- * Simple JavaBean domain object that represents a User.
- *
- * @author Roman Hayda
- */
+
 @Entity
 @Table(name = "users")
 public class User {

@@ -14,13 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-/**
- * Created on 25.05.2017
- *
- * Request mapping for {@link com.springapp.market.model.Product}.
- *
- * @author Roman Hayda
- */
+
 @Controller
 public class ProductController {
     private ProductService productService;

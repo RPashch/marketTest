@@ -5,12 +5,6 @@ import com.springapp.market.model.Product;
 
 import java.util.List;
 
-/**
- * Created on 24.05.2017
- *
- * Service class for {@link com.springapp.market.model.Company}.
- * @author Roman Hayda
- */
 public interface CompanyService {
 
     Company getCompanyById(long id);

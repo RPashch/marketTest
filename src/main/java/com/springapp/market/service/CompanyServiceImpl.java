@@ -11,13 +11,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-/**
- * Created on 25.05.2017
- *
- * Implementation of {@link CompanyService} interface.
- *
- * @author Roman Hayda
- */
 @Service
 //@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 public class CompanyServiceImpl implements CompanyService {

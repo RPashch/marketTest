@@ -9,13 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-/**
- * Created on 25.05.2017
- *
- * mplementation of {@link ProductService} interface.
- *
- * @author Roman Hayda
- */
 @Service
 //@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 public class ProductServiceImpl implements ProductService {

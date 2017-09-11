@@ -5,13 +5,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 import javax.persistence.*;
 import java.util.Set;
 
-/**
- * Created on 22.05.2017
- *
- * Simple JavaBean object that represents producer Company
- *
- * @author Roman Hayda
- */
+
 @Entity
 @Table(name = "companies")
 public class Company {

@@ -12,13 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Created on 24.05.2017
- *
- * Implementation of {@link UserService} interface.
- *
- * @author Roman Hayda
- */
 @Service
 public class UserServiceImpl implements UserService {
 

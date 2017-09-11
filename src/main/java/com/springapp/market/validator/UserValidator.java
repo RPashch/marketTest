@@ -8,14 +8,7 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
-/**
- * Validator for {@link com.springapp.market.model.security.User} class,
- * implements {@link Validator} interface.
- *
- * Created on 24.05.2017
- *
- * @author Roman Hayda
- */
+
 @Component
 public class UserValidator implements Validator{
 
