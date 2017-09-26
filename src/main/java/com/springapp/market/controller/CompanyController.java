@@ -25,6 +25,7 @@ public class CompanyController {
 
     @RequestMapping(value = "/companies", method = RequestMethod.GET)
     public String listCompanies(Model model) {
+    	System.out.println("companies + GET");
         model.addAttribute("company", new Company());
         model.addAttribute("listCompanies", this.companyService.listCompanies());
         return "companies";
@@ -32,6 +33,7 @@ public class CompanyController {
 
     @RequestMapping(value = "/save_company", method = RequestMethod.POST)
     public ModelAndView saveCompany(@ModelAttribute("company") @Valid Company company, BindingResult result) {
+    	System.out.println("save_company + POST");
         if (result.hasErrors()) {
             return new ModelAndView("redirect:/companies");
         }
@@ -47,6 +49,7 @@ public class CompanyController {
 
     @RequestMapping("edit_company/{id}")
     public String editProduct(@PathVariable("id") long id, Model model) {
+    	System.out.println("edit_company/{id} + method is indefined");
         model.addAttribute("company", this.companyService.getCompanyById(id));
         model.addAttribute("listCompanies", this.companyService.listCompanies());
         return "companies";
@@ -54,11 +57,13 @@ public class CompanyController {
 
     @RequestMapping(value="company_info/{id}")
     public String companyInfo(@PathVariable("id") long id, Model model) {
+    	System.out.println("company_info/{id} + method is indefined");
         model.addAttribute("company", this.companyService.getCompanyById(id));
         return "company_info";
     }
     @RequestMapping(value="company_info/{id}/all")
     public String allProducts(@PathVariable("id") long id, Model model) {
+    	System.out.println("company_info/{id}/all + method is indefined");
         model.addAttribute("company", this.companyService.getCompanyById(id));
         model.addAttribute("allProducts", companyService.getProductsByCompanyId(id));
         return "/company_info";

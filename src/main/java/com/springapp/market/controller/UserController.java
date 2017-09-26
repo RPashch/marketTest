@@ -28,13 +28,14 @@ public class UserController {
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
     public String registration(Model model) {
         model.addAttribute("userForm", new User());
-
+        System.out.println("registration + method = RequestMethod.GET");
         return "registration";
     }
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
     public String registration(@ModelAttribute("userForm") @Validated User userForm, BindingResult bindingResult, Model model) {
-        userValidator.validate(userForm, bindingResult);
+    	System.out.println("registration + method = RequestMethod.POST");
+    	userValidator.validate(userForm, bindingResult);
 
         if (bindingResult.hasErrors()) {
             return "registration";
@@ -46,9 +47,23 @@ public class UserController {
 
         return "redirect:/welcome";
     }
+    
+/*    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public String loginSubmit(Model model,String error, String logout) {
+         System.out.println("login Method=POST"); 
+         if (error != null) {
+             model.addAttribute("error", "Username or password is incorrect.");
+         }
 
+         if (logout != null) {
+             model.addAttribute("message", "Logged out successfully.");
+         }
+    	return "catalog";
+    }
+*/
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login(Model model, String error, String logout) {
+    	System.out.println("login + method = RequestMethod.GET");
         if (error != null) {
             model.addAttribute("error", "Username or password is incorrect.");
         }
@@ -62,11 +77,13 @@ public class UserController {
 
     @RequestMapping(value = {"/", "/welcome"}, method = RequestMethod.GET)
     public String welcome(Model model) {
+    	System.out.println("welcome + method = RequestMethod.GET");
         return "welcome";
     }
 
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
     public String admin(Model model) {
+    	System.out.println("admin + method = RequestMethod.GET");
         return "admin";
     }
 
